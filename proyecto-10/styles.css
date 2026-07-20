@@ -1,0 +1,338 @@
+:root {
+    --bg-color: #0f172a;
+    --card-color: #1e293b;
+    --text-color: #f8fafc;
+    --accent-color: #3b82f6;
+    --secondary-color: #64748b;
+    --border-color: #334155;
+    --success-color: #10b981;
+}
+
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --card-color: #ffffff;
+    --text-color: #1e293b;
+    --secondary-color: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo h1 {
+    color: var(--accent-color);
+    font-size: 2rem;
+}
+
+.logo p {
+    color: var(--secondary-color);
+}
+
+.theme-btn {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: rotate(180deg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    background: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.progress-section {
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-color), #60a5fa);
+    border-radius: 999px;
+    transition: width 0.5s ease;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--card-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.challenges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.challenge-card {
+    background: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.category,
+.difficulty {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.html { background: #f97316; color: white; }
+.css { background: #3b82f6; color: white; }
+.javascript { background: #eab308; color: black; }
+
+.easy { background: #10b981; color: white; }
+.medium { background: #f59e0b; color: white; }
+.hard { background: #ef4444; color: white; }
+
+.challenge-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.challenge-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.complete-btn {
+    width: 100%;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.complete-btn:hover {
+    background: #2563eb;
+}
+
+.complete-btn.completed {
+    background: var(--success-color);
+}
+
+.achievements {
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.achievement-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--bg-color);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.achievement.unlocked {
+    opacity: 1;
+    border: 1px solid var(--success-color);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+
+.challenge-detail {
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.challenge-detail h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.challenge-description {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.challenge-section {
+    margin-bottom: 2rem;
+}
+
+.challenge-section h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.challenge-section ul,
+.challenge-section ol {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.challenge-section li {
+    margin-bottom: 0.5rem;
+}
+
+.challenge-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.challenge-actions .complete-btn {
+    width: auto;
+    padding: 0.9rem 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}

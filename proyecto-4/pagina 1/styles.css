@@ -1,0 +1,93 @@
+* {
+    font-family: "Young Serif", serif;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+
+    --White: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: #f3e5d8;
+
+    background-color: var(--Rose-50);
+}
+
+
+.container {
+    background-color: var(--White);
+    width: 600px;
+    margin: auto;
+}
+
+.container p {
+    margin-left: 5px;
+}
+
+.container li::marker {
+    color: var(--Brown-800);
+}
+
+h1 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.home p{
+    width: 400px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.home-img {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.preparation {
+    background-color: #fff7fc;
+    margin: 10px;
+}
+
+.preparation p {
+    color: var(--Rose-800);
+}
+
+.ingredients {
+
+}
+
+.ingredients p {
+    color: var(--Brown-800);
+}
+
+.table {
+    margin: auto;
+    width: 40dvw;
+}
+
+.table td {
+    border-top: 2px solid #000;
+}
+
+
+/*---- MEDIAQUERYES ---*/
+
+@media screen and (max-width: 400px){
+    .table {
+        width: 80dvw;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+}

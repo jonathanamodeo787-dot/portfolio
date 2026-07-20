@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --color-principal: #328CC1;
+    --navbar-color: #999;
+    --text-color: #000;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--color-principal);
+    color: var(--text-color);
+}
+
+/* ----- NAVBAR -----*/
+
+.navbar {
+    min-height: 8dvh;
+    background-color: var(--navbar-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.navbar a {
+    margin: auto;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo {
+    width: 50px;
+}
+
+
+/* ----- INFO -----*/
+
+.header-img__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img__container img {
+    width: 35dvw;
+    margin: 5px;
+}
+
+
+.info {
+    width: 40dvw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info li {
+    list-style: none;
+    font-size: 20px;
+}
+
+/* ----- TIMELINE -----*/
+
+.timeline{
+    position:relative;
+    max-width: 80dvw;
+    margin:auto;
+}
+
+.timeline::after{
+    content:"";
+    position:absolute;
+    width: 5px;
+    background:#2b7cff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.container{
+    position:relative;
+    width: 50%;
+    padding:20px 40px;
+}
+
+.izquierda{
+    left: 0%;
+}
+
+.derecha{
+    left:50%;
+}
+
+.container::after{
+    content:"";
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background:#fff;
+    border:5px solid #2b7cff;
+    border-radius:50%;
+    top:35px;
+    right:-15px;
+    z-index: 10;
+}
+
+.derecha::after{
+    left:-15px;
+}
+
+.contenido{
+    background:white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow :0 5px 15px rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.contenido h2{
+    color:#2b7cff;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer li {
+    margin: 5px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fffa;
+}
+
+
+/* ----- RESPONSIVE ----- */
+
+@media (max-width: 768px){
+
+    .info{
+        width: 90%;
+    }
+
+    /* La línea pasa al lado izquierdo */
+    .timeline::after{
+        left: 30px;
+    }
+
+    .container{
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 20px;
+    }
+
+    /* Todos los cuadros quedan del mismo lado */
+    .izquierda,
+    .derecha{
+        left: 0;
+    }
+
+    /* Todos los puntos quedan sobre la línea */
+    .container::after{
+        left: 20px;
+        right: auto;
+    }
+
+    .contenido{
+        width: 100%;
+    }
+
+}

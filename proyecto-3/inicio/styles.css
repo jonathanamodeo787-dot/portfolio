@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --color-principal-1: #000;
+    --color-principal-2: #444;
+    --color-principal-3: #f00;
+    --text-color: #aaa;
+    --bg-color: #fff;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/*----- NAVBAR -----*/
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 10dvh;
+    background-color: var(--color-principal-2);
+    z-index: 10;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: auto;
+}
+
+.logo {
+    width: 50px;
+}
+
+.navbar-img {
+    width: 50px;
+}
+
+/* ----- HEADER -----*/
+
+.header {
+    color: var(--text-color);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-img-container {
+    display: flex;
+}
+
+.header-img {
+    margin: auto;
+    width: 30dvw;
+}
+
+
+/* ----- INFORMACION -----*/
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nosotros h2 {
+    text-align: center;
+}
+
+.nosotros p{
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* -----GIMNASIO Y PRECIOS ------*/
+
+.gym-info {
+    color: var(--color-principal-2);
+}
+
+.gym-info p {
+    margin: 7px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.gym-info ul > li {
+    margin: 20px;
+}
+
+.gym-img-conteiner {
+    text-align: center;
+}
+
+.gym-img {
+    width: 40dvw;
+}
+
+
+/* ------ PRECIOS ----- */
+
+.planes {
+    display: flex;
+    justify-content: center;
+}
+
+
+.plan-container {
+    background-color: #000b;
+    color: #fff;
+    margin: 0px 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.plan-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #0008;
+}
+
+/* ----- ENTRENADORES -----*/
+
+.Entrenadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.entrenador {
+    background-color: var(--color-principal-1);
+    color: #fffa;
+    width: 50dvw;
+    margin: 5px;
+}
+
+.entrenador img {
+    width: 7dvw;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/*----- FOOTER -----*/
+
+.footer {
+    background-color: var(--color-principal-2);
+    height: 8dvh;
+    text-align: center;
+}
+
+
+/*----- MEDIAS -----*/
+
+@media screen and (max-width: 500px){
+    .navbar {
+        justify-content: center;
+        gap: 10px;
+        width: 99,9%;
+    }
+    
+    .navbar-link {
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .planes {
+        flex-direction: column;
+    }
+
+    .plan-container {
+        margin: auto;
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+
+    .Entrenadores {
+        width: 90%;
+    }
+
+    .entrenador {
+        width: 90%;
+    }
+
+    .entrenador img {
+        width: 80px;
+    }
+}
